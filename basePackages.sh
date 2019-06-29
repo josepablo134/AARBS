@@ -68,23 +68,22 @@ logger "Installing base packages"
 sudo pacman -Syu vim ranger ntfs-3g linux-headers openssh --noconfirm ||\
 	cerr "Error installing vim & ranger"
 #	X11 tools
-sudo pacman -Syu xorg xorg-xinit xterm --noconfirm ||\
+sudo pacman -S xorg xorg-xinit xterm --noconfirm ||\
 	cerr "Error installing Xorg"
 #	X11 environment
-sudo pacman -Syu i3 dmenu --noconfirm ||\
+sudo pacman -S i3 dmenu --noconfirm ||\
 	cerr "Error installing i3 DE"
-sudo pacman -Syu xcompmgr acpilight surf tabbed --noconfirm ||\
+yes | sudo pacman -S xcompmgr acpilight surf tabbed --noconfirm ||\
 	cerr "Error installing DE Tools"
 #	Audio tools
-sudo pacman -Syu alsa-lib alsa-plugins \
+sudo pacman -S alsa-lib alsa-plugins \
 pulseaudio-alsa pavucontrol-qt --noconfirm ||\
 	cerr "Error installing audio tools"
 #	Devel tools
-sudo pacman -Syu nodejs python3 terminator firefox git || \
+sudo pacman -S nodejs python3 terminator firefox git || \
 	cerr "Error installing miscellaneous"
 
 logger "Copying configuration files"
-exit 0
 #	Replace with sudo
 sreplace /etc/X11/xinit/xinitrc $BASEDIR/sources/xinitrc.txt ||\
 	cerr "Error replacing X11"
