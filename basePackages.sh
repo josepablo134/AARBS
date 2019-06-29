@@ -65,7 +65,7 @@ BASEDIR=$(pwd)
 
 logger "Installing base packages"
 #	Basic tools
-sudo pacman -Syu vim ranger ntfs-3g linux-headers --noconfirm ||\
+sudo pacman -Syu vim ranger ntfs-3g linux-headers openssh --noconfirm ||\
 	cerr "Error installing vim & ranger"
 #	X11 tools
 sudo pacman -Syu xorg xorg-xinit xterm --noconfirm ||\
@@ -84,6 +84,7 @@ sudo pacman -Syu nodejs python3 terminator firefox git || \
 	cerr "Error installing miscellaneous"
 
 logger "Copying configuration files"
+exit 0
 #	Replace with sudo
 sreplace /etc/X11/xinit/xinitrc $BASEDIR/sources/xinitrc.txt ||\
 	cerr "Error replacing X11"
@@ -100,5 +101,8 @@ cp $BASEDIR/sources/vimrc.txt $HOME/.vimrc
 #	Copying personal scripts
 mkdir -p $HOME/Scripts
 cp $BASEDIR/sources/Scripts/* $HOME/Scripts/
-#	Wallpaper setter
 
+mkdir -p $HOME/Dev/Git/Personal
+mkdir -p $HOME/Documents/
+mkdir -p $HOME/Downloads
+mkdir -p $HOME/Pictures

@@ -1,2 +1,4 @@
 set -o vi
 VISUAL=vim
+
+alias pypip='sudo -H python3 -m pip'
