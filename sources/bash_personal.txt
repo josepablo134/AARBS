@@ -1,4 +1,22 @@
+export VISUAL=vim
 set -o vi
-VISUAL=vim
 
+alias v="vim"
+alias play="ffplay -nodisp"
+alias pac="sudo pacman"
 alias pypip='sudo -H python3 -m pip'
+
+alias hdmiLeft="xrandr --output HDMI-1 --auto --left-of eDP-1"
+alias hdmiRight="xrandr --output HDMI-1 --auto --right-of eDP-1"
+alias hdmiOff="xrandr --output HDMI-1 --off"
+
+alias nvidiahdmiLeft="xrandr --output HDMI-1-1 --auto --left-of eDP-1-1"
+alias nvidiahdmiRight="xrandr --output HDMI-1-1 --auto --right-of eDP-1-1"
+alias nvidiahdmiOff="xrandr --output HDMI-1-1 --off"
+
+#	ROG Asus Configuration
+#alias mountWin="sudo mount /dev/sda4 /media/josepablocb/WinC && sudo mount /dev/sdb1 /media/josepablocb/Drivers"
+
+#alias umountWin="sudo umount /media/josepablocb/WinC && sudo umount /media/josepablocb/Drivers"
+
+export PATH=$PATH:/opt/PersonalScripts:
