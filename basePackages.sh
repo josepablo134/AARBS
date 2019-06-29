@@ -73,7 +73,7 @@ sudo pacman -S xorg xorg-xinit xterm --noconfirm ||\
 #	X11 environment
 sudo pacman -S i3 dmenu --noconfirm ||\
 	cerr "Error installing i3 DE"
-yes | sudo pacman -S xcompmgr acpilight surf tabbed feh ffmpeg --noconfirm ||\
+yes | sudo pacman -S xcompmgr acpilight surf tabbed feh ffmpeg ||\
 	cerr "Error installing DE Tools"
 #	Audio tools
 sudo pacman -S alsa-lib alsa-plugins \
