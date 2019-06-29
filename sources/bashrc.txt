@@ -1,0 +1,13 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+PS1="\[\e[01;32m\]\u\[\e[38;5;24m\] \[\e[38;5;30m\]\W\[\e[38;5;35m\] > \[$(tput sgr0)\] "
+
+
+source /home/josepablocb/.bash_personal

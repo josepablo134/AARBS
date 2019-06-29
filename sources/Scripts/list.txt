@@ -1,0 +1,3 @@
+googleSearch.sh
+setWallpaper.sh
+null.sh

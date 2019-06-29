@@ -1,0 +1,3 @@
+set number
+set ts=4
+map <F12> :w<CR> :!bash<CR>
