@@ -65,6 +65,10 @@ BASEDIR=$(pwd)
 
 logger "Installing base packages"
 #	Basic tools
+sudo pacman -Sy archlinux-keyring --noconfirm ||\
+	cerr "Error installing archlinux-keyring"
+sudo pacman-key --refresh-keys ||\
+	cerr "Error refreshing keys"
 sudo pacman -Syu vim ranger ntfs-3g linux-headers openssh --noconfirm ||\
 	cerr "Error installing vim & ranger"
 #	X11 tools
@@ -73,7 +77,7 @@ sudo pacman -S xorg xorg-xinit xterm --noconfirm ||\
 #	X11 environment
 sudo pacman -S i3 dmenu --noconfirm ||\
 	cerr "Error installing i3 DE"
-yes | sudo pacman -S xcompmgr acpilight surf tabbed feh ffmpeg ||\
+sudo pacman -S xcompmgr acpilight surf tabbed feh ffmpeg ||\
 	cerr "Error installing DE Tools"
 #	Audio tools
 sudo pacman -S alsa-lib alsa-plugins \
