@@ -99,6 +99,8 @@ cp $BASEDIR/sources/bash_personal.txt $HOME/.bash_personal
 #	Set i3 Configuration
 mkdir -p $HOME/.config/i3
 cp $BASEDIR/sources/config.txt $HOME/.config/i3/config
+mkdir -p $HOME/.config/terminator
+cp $BASEDIR/sources/terminatorconfig.txt $HOME/.config/terminator/config
 #	Set vim configuration
 cp $BASEDIR/sources/vimrc.txt $HOME/.vimrc
 #	Copying personal scripts
