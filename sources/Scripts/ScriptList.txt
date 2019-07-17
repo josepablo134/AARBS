@@ -1,0 +1,7 @@
+startVBoxMachine
+stopVBoxMachine
+zoiper.sh
+ccstudio.sh
+slbrowser.sh
+googleSearch.sh
+setWallpaper.sh
